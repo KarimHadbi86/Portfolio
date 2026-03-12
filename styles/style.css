@@ -1,0 +1,371 @@
+/* --- Base & Typographie --- */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: white;
+    font-family: "Century Gothic", sans-serif;
+    background-color: black;
+}
+
+.page-blanche {
+    background-color: white !important;
+    color: black !important;
+}
+
+p {
+    text-align: justify;
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    text-align: justify;
+    font-size: 1.1rem;
+	font-weight: normal;
+    color: black;
+    line-height: 1.6;
+}
+
+/* --- Barre de Navigation --- */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: black;
+}
+
+.nav-link {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.left-link {
+    left: 0;
+    background-color: #000000;
+    color: #ffffff;
+    padding-left: 40px;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.right-link {
+    right: 0;
+    background-color: #ffffff;
+    color: #000000;
+    justify-content: flex-end;
+    padding-right: 40px;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.nav-link:hover { opacity: 0.8; }
+
+.logo-groupe {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nom-artiste {
+    font-size: 28px;
+    color: white;
+    line-height: 1.1;
+}
+
+.texte-droite {
+    color: black;
+    text-align: right;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+/* --- Arrière-plan Vidéo --- */
+.video-background {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: -1;
+    background-color: black;
+}
+
+.vignette-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 40%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100%; height: 56.25vw;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* --- Accordéon (Cards) --- */
+.accordion-container {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    height: 600px;
+    align-items: stretch;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 33%;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    overflow: hidden;
+    display: flex;
+}
+
+.card:hover, .card.active {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.card.active { width: 220%; }
+
+.title-vertical {
+    font-size: 28px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    padding: 10px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    opacity: 0;
+    padding: 20px;
+    width: 100%;
+    display: none;
+    transition: opacity 0.4s ease;
+    overflow-y: auto;
+}
+
+.card.active .content {
+    display: block;
+    opacity: 1;
+}
+
+/* --- Vidéos Responsives --- */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+}
+
+/* --- Section À Propos --- */
+.presentation-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 60px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-container {
+    flex-shrink: 0;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #000;
+}
+
+.photo-container img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+
+.texte-presentation {
+    max-width: 600px;
+    text-align: left;
+    color: black;
+}
+
+.presentation-section-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10%;
+    background: #000000;
+}
+
+.contact, .contact-content {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    max-width: 155px;
+}
+
+.contact { font-size: 24px; }
+.contact-content { font-size: 18px; }
+
+/* --- Footer --- */
+footer {
+    position: fixed;
+    bottom: 0; left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    padding: 15px 0;
+    font-size: 14px;
+    z-index: 100;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.contact-info { display: flex; gap: 20px; }
+
+/* --- Adaptations Mobiles (Écrans < 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Navbar : On empile les éléments */
+    .navbar {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .nav-link {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        clip-path: none !important; /* On enlève les biseaux pour plus de clarté */
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .left-link { padding-left: 0; }
+    .right-link { padding-right: 0; }
+
+    .logo-groupe {
+        gap: 10px;
+    }
+
+    .nom-artiste { font-size: 20px; }
+    .texte-droite { 
+        text-align: center; 
+        font-size: 12px;
+    }
+
+    /* 2. Accordéon : Passage en mode vertical */
+    .accordion-container {
+        flex-direction: column;
+        height: auto; /* La hauteur s'adapte au contenu ouvert */
+        gap: 10px;
+    }
+
+    .card {
+        width: 100% !important; /* Les cartes prennent toute la largeur */
+        flex-direction: column;
+        height: auto;
+        min-height: 60px;
+    }
+
+    .title-vertical {
+        writing-mode: horizontal-tb; /* Le texte redevient horizontal */
+        padding: 15px;
+        font-size: 20px;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card.active {
+        width: 100% !important;
+    }
+
+    /* 3. Section À Propos */
+    .presentation-section {
+        flex-direction: column;
+        padding: 40px 5%;
+        gap: 30px;
+    }
+
+    .photo-container {
+        width: 250px; /* Image plus petite sur mobile */
+        height: 250px;
+    }
+
+    .texte-presentation {
+        text-align: center;
+    }
+
+    .texte-presentation p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    /* 4. Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    footer {
+        position: relative; /* On le détache du bas pour ne pas masquer le contenu */
+    }
+
+.contact-info a:hover, .contact-content a:hover {
+    color: #cccccc !important; /* Gris clair au survol */
+    transition: 0.3s;
+}
+}

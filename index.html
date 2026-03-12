@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Bienvenue - Karim Hadbi</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+	
+<body>
+<script>
+    function openCard(element) {
+        const allCards = document.querySelectorAll('.card');
+        if (element.classList.contains('active')) {
+            element.classList.remove('active');
+        } else {
+            allCards.forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+        }
+    }
+</script>
+
+<div class="video-background">
+    <div class="vignette-overlay"></div>
+    <iframe 
+        src="https://www.youtube.com/embed/JeM1_PZEC8c?autoplay=1&mute=1&loop=1&playlist=JeM1_PZEC8c&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1" 
+        frameborder="0" 
+        allow="autoplay; encrypted-media">
+    </iframe>
+</div>
+	
+<div class="navbar">
+    <a href="index.html" class="nav-link left-link">
+        <span>
+            <div class="logo-groupe">
+                <img src="logo/Logo Karim.png" width="38" alt="Logo">
+                <div class="nom-artiste">Karim <br> Hadbi</div>
+            </div>	
+        </span>
+    </a>
+    <a href="a-propos.html" class="nav-link right-link">
+        <span>
+            <div class="texte-droite">
+                Artiste Créateur <br>
+                [Réalisateur/Scénariste/Compositeur <br>
+                Graphiste/Web]
+            </div>
+        </span>
+    </a>
+</div>
+
+<div class="accordion-container">
+    <div class="card" onclick="openCard(this)">
+        <div class="title-vertical">Fiction</div>
+        <div class="content">
+            <h3>Le rêve [court métrage]</h3>
+            <h2>Réalisation / Montage / Composition musique originale</h2>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/bPabOgwYti4?si=7O0eL4174UXa547w" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+	
+    <div class="card" onclick="openCard(this)">
+        <div class="title-vertical">Télévision</div>
+        <div class="content">
+            <h3>L'or de la culture [Émission en direct]</h3>
+            <h2>Directeur technique</h2>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/qQFf9nnMlhs?si=8-7o-ZYtIR0cDy0j" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <h3>Pharsyde - A$AP ROCKY [Vidéoclip en studio]</h3>
+            <h2>Directeur technique</h2>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/K30g-eY0pmU?si=NVIDZVT_Svj24fuO" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+	
+            <h3>Torrents VS Inuk [Captation mobile]</h3>
+            <h2>Preneur de son</h2>	
+            <div class="video-responsive">	
+                <iframe src="https://www.youtube.com/embed/WOz7VVtGQ1o?si=_8KI5-ZdpuuKgEtw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>	
+            </div>	
+	
+            <h3>L'annonce [Drame en studio]</h3>
+            <h2>Preneur de son</h2>	
+            <div class="video-responsive">	
+                <iframe src="https://www.youtube.com/embed/POYmX_EhD2g?si=1pK_VJwCEch1RYpM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>		
+        </div>
+    </div>
+	
+    <div class="card" onclick="openCard(this)">
+        <div class="title-vertical">Vidéo journalistique</div>
+        <div class="content">
+            <h3>Hélène Vlasblom [Portrait]</h3>
+            <h2>Réalisation / Caméra / Montage / Composition de musique originale</h2>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/WsIZ_KC9waY?si=WZHVxhGtFCk2gXQ4" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+	
+    <div class="card" onclick="openCard(this)">
+        <div class="title-vertical">Corpo</div>
+        <div class="content">
+            <h3>EART [publicité]</h3>
+            <h2>Co-réalisation / Caméra / Montage / Composition de musique originale</h2>
+            <div class="video-responsive">
+                <iframe src="https://www.youtube.com/embed/MpZ2AZKWZ4U?si=YAs6rrHrnux8zH8K" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>	
+
+<footer>
+    <div class="footer-content">
+        <h3 class="copyright">&copy; 2026 Karim Hadbi. Tous droits réservés.</h3>
+       <div class="contact-info">
+    <span>Courriel : <a href="mailto:karimhadbi86@gmail.com" style="color: white; text-decoration: none;">karimhadbi86@gmail.com</a></span>
+    <span>Cellulaire : <a href="tel:6136211779" style="color: white; text-decoration: none;">(613) 621-1779</a></span>
+</div>
+    </div>
+</footer>
+	
+</body>
+</html>
