@@ -369,3 +369,41 @@ footer {
     transition: 0.3s;
 }
 }
+
+
+
+.nav-label {
+    position: absolute;
+    bottom: 10px; /* Ajuste la hauteur selon ton goût */
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Positionnement du mot Accueil (côté noir) */
+.label-accueil {
+    right: 25%; /* Place le texte près de la pointe du biseau */
+    color: rgba(255, 255, 255, 0.7); /* Blanc légèrement transparent */
+}
+
+/* Positionnement du mot À propos (côté blanc) */
+.label-propos {
+    left: 5%; /* Place le texte près du creux du biseau */
+    color: rgba(0, 0, 0, 0.6); /* Noir légèrement transparent */
+}
+
+/* Ajustement pour le survol */
+.nav-link:hover .nav-label {
+    color: rgba(255, 255, 255, 1);
+}
+.right-link:hover .nav-label {
+    color: rgba(0, 0, 0, 1);
+}
+
+/* --- Correction pour Mobile --- */
+@media (max-width: 768px) {
+    .nav-label {
+        display: none; /* On les cache sur mobile car la structure change */
+    }
+}
