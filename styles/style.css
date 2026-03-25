@@ -383,7 +383,7 @@ footer {
 
 /* Positionnement du mot Accueil (côté noir) */
 .label-accueil {
-    right: 27%; /* Place le texte près de la pointe du biseau */
+    right: 26%; /* Place le texte près de la pointe du biseau */
     color: rgba(255, 255, 255, 0.7); /* Blanc légèrement transparent */
 }
 
