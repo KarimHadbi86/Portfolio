@@ -383,13 +383,13 @@ footer {
 
 /* Positionnement du mot Accueil (côté noir) */
 .label-accueil {
-    right: 30%; /* Place le texte près de la pointe du biseau */
+    right: 28%; /* Place le texte près de la pointe du biseau */
     color: rgba(255, 255, 255, 0.7); /* Blanc légèrement transparent */
 }
 
 /* Positionnement du mot À propos (côté blanc) */
 .label-propos {
-    left: 0%; /* Place le texte près du creux du biseau */
+    left: 3%; /* Place le texte près du creux du biseau */
     color: rgba(0, 0, 0, 0.6); /* Noir légèrement transparent */
 }
 
